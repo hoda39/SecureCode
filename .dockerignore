@@ -1,0 +1,16 @@
+# Exclude local fuzzing artefacts, build outputs, and huge folders
+Eclipser/examples/
+Eclipser/build/
+box/
+examples/
+**/afl-master-box/
+**/syncdir/
+**/crashes/
+
+# Node modules and logs
+node_modules/
+*.log
+
+# Local VSCode or OS files
+.vscode/
+.DS_Store

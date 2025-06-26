@@ -1,0 +1,108 @@
+{
+  "name": "secure-code-analyzer",
+  "displayName": "secure-code-analyzer",
+  "description": "Dynamic analysis for vulnerable c++ source code",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.96.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onLanguage:c",
+    "onLanguage:cpp"
+  ],
+  "main": "./out/extension/extension.js",
+  "extensionDependencies": [
+    "MS-SarifVSCode.sarif-viewer"
+  ],
+  "contributes": {
+    "commands": [
+      {
+        "command": "secure-code-analyzer.runDynamicAnalysis",
+        "title":   "Run Dynamic Analysis",
+        "category":"Secure Code Analyzer",
+        "when":    "editorLangId == c || editorLangId == cpp"
+      },
+      {
+        "command": "secure-code-analyzer.cancelDynamicAnalysis",
+        "title":   "Cancel Dynamic Analysis",
+        "category":"Secure Code Analyzer",
+        "when":    "editorLangId == c || editorLangId == cpp"
+      },
+      {
+        "command": "secure-code-analyzer.registerUser",
+        "title":   "Sign Up",
+        "category":"Secure Code Analyzer",
+        "when":    "editorLangId == c || editorLangId == cpp"
+      }
+    ],
+    "menus": {
+      "commandPalette": [
+        {
+          "command": "secure-code-analyzer.runDynamicAnalysis",
+          "when":   "editorLangId == c || editorLangId == cpp"
+        },
+        {
+          "command": "secure-code-analyzer.cancelDynamicAnalysis",
+          "when":   "editorLangId == c || editorLangId == cpp"
+        },
+        {
+          "command": "secure-code-analyzer.registerUser",
+          "when":   "editorLangId == c || editorLangId == cpp"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext .ts,.tsx",
+    "test": "vscode-test",
+    "clean": "rm -rf out || true",
+    "clean:win": "rimraf out",
+    "build": "npm run clean && tsc -p ./",
+    "start:api": "ts-node src/api/server.ts",
+    "start:extension": "ts-node src/extension.ts",
+    "start": "concurrently \"npm run start:api\" \"npm run start:extension\"",
+    "postinstall": "npm install -D typescript ts-node @types/node"
+  },
+  "dependencies": {
+    "@types/luxon": "^3.4.2",
+    "axios": "^1.6.2",
+    "bcrypt": "^5.1.1",
+    "date-fns": "^4.1.0",
+    "dotenv": "^16.4.7",
+    "express": "^4.18.2",
+    "express-rate-limit": "^7.5.0",
+    "helmet": "^8.0.0",
+    "jsonwebtoken": "^9.0.2",
+    "luxon": "^3.5.0",
+    "uuid": "^11.0.5"
+  },
+  "devDependencies": {
+    "@types/bcrypt": "^5.0.2",
+    "@types/bcryptjs": "^2.4.6",
+    "@types/date-fns": "^2.5.3",
+    "@types/express": "^5.0.0",
+    "@types/express-rate-limit": "^5.1.3",
+    "@types/helmet": "^0.0.48",
+    "@types/jsonwebtoken": "^9.0.8",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "^20.17.32",
+    "@types/uuid": "^10.0.0",
+    "@types/vscode": "^1.96.0",
+    "@typescript-eslint/eslint-plugin": "^8.17.0",
+    "@typescript-eslint/parser": "^8.17.0",
+    "@vscode/test-cli": "^0.0.10",
+    "@vscode/test-electron": "^2.4.1",
+    "concurrently": "^9.1.2",
+    "eslint": "^9.16.0",
+    "rimraf": "^6.0.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.3"
+  }
+}

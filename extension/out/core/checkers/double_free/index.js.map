@@ -1,0 +1,1 @@
+{"version":3,"file":"index.js","sourceRoot":"","sources":["../../../../src/core/checkers/double_free/index.ts"],"names":[],"mappings":";;;AACA,qCAAiC;AACjC,mCAAwC;AAE3B,QAAA,oBAAoB,GAAY;IAC3C,IAAI,EAAE,aAAa;IACnB,SAAS,EAAE,EAAE,EAAE,wCAAwC;IACvD,WAAW,EAAE,gEAAgE;IAC7E,KAAK,EAAL,cAAK;IACL,aAAa,EAAb,qBAAa;CACd,CAAC"}

@@ -1,0 +1,1 @@
+{"version":3,"file":"index.js","sourceRoot":"","sources":["../../../../src/core/checkers/use_after_free/index.ts"],"names":[],"mappings":";;;AACA,qCAAiC;AACjC,mCAAwC;AAE3B,QAAA,mBAAmB,GAAY;IAC1C,IAAI,EAAE,gBAAgB;IACtB,SAAS,EAAE,EAAE,EAAE,wCAAwC;IACvD,WAAW,EAAE,iDAAiD;IAC9D,KAAK,EAAL,cAAK;IACL,aAAa,EAAb,qBAAa;CACd,CAAC"}

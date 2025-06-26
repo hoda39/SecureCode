@@ -1,0 +1,1 @@
+{"version":3,"file":"index.js","sourceRoot":"","sources":["../../../../src/core/checkers/use_after_return/index.ts"],"names":[],"mappings":";;;AACA,qCAAiC;AACjC,mCAAwC;AAE3B,QAAA,qBAAqB,GAAY;IAC5C,IAAI,EAAE,kBAAkB;IACxB,SAAS,EAAE,EAAE,EAAE,wCAAwC;IACvD,WAAW,EAAE,gEAAgE;IAC7E,KAAK,EAAL,cAAK;IACL,aAAa,EAAb,qBAAa;CACd,CAAC"}
